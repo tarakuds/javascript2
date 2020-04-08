@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<script type="text/javascript">
+
+			let data = [{principal:2500,time:1.8},{principal:1000,time:5},{principal:3000, time:1},{principal:2000, time:3}];
+			let interest=[]
+
+			function interestCalculator(data) {
+
+				let interestdata={};
+				
+
+				for ( i=data[0]; i<data.length; i++) {
+					let p=data[i].principal;
+					let t=data[i].time;
+					let rate;
+
+					interest =(p*rate*t)/100;
+
+					if (data.principal>=2500 && 1<data.time<3) {
+					rate = 3
+					interestdata.push(interest);
+					console.log(rate);
+					
+				}
+				else if (data.principal>=2500 && data.time>=3) {
+						rate=4
+						interestdata.push(interest);
+						
+				}
+					else if (data.principal<=2500 || data.time<=1) {
+						rate = 2
+						interestdata.push(interest);
+					} 
+						else {
+							rate = 1
+							interestdata.push(interest);
+							
+						}
+
+
+				console.log(data)
+				}
+			let result = interestCalculator(data);
+			console.log(result);
+
+			}
+			
+			interestdata={interest:data.principal, interest:data.rate,interest:data.time};
+
+				
+			
+
+			console.log(interest);
+
+			//return interestdata
+
+		</script>
+</body>
+</html>
